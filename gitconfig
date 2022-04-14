@@ -1,0 +1,7 @@
+[user]
+	email = fadwad@foxmail.com
+	name = ykx
+[alias]
+	last = log -1 HEAD
+  	st = status
+	sts = status -s
