@@ -20,19 +20,13 @@ let g:airline#extensions#tabline#formatter='unique_tail'
 
 " Turn on syntax highlighting.
 syntax on
-
+colorscheme desert
 " Disable the default Vim startup message.
 set shortmess+=I
-
+set wildmenu
 " Show line numbers.
 set number
-
-" This enables relative line numbering mode. With both number and
-" relativenumber enabled, the current line shows the true line number, while
-" all other lines (above and below) are numbered relative to the current line.
-" This is useful because you can tell, at a glance, what count is needed to
-" jump up or down to a particular line, by {count}k to go up or {count}j to go
-" down.
+set history=1000
 set relativenumber
 
 " Always show the status line at the bottom, even if you only have one window open.
@@ -76,11 +70,18 @@ set noerrorbells visualbell t_vb=
 " bad habit. The former is enforceable through a .vimrc, while we don't know
 " how to prevent the latter.
 " Do this in normal mode...
+" cmd
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+"nomal
 nnoremap <Left>  :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up>    :echoe "Use k"<CR>
 nnoremap <Down>  :echoe "Use j"<CR>
-" ...and in insert mode
+nnoremap <silent>[b :bp<CR>
+nnoremap <silent>]b :bn<CR>
+nnoremap <C-n> :NERDTree<CR>
+"insert mode
 inoremap <Left>  <ESC>:echoe "Use h"<CR>
 inoremap <Right> <ESC>:echoe "Use l"<CR>
 inoremap <Up>    <ESC>:echoe "Use k"<CR>
