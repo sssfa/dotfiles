@@ -20,9 +20,10 @@ let g:airline#extensions#tabline#formatter='unique_tail'
 
 " Turn on syntax highlighting.
 syntax on
-colorscheme desert
+colorscheme elflord
 " Disable the default Vim startup message.
 set shortmess+=I
+"set background=light
 set wildmenu
 " Show line numbers.
 set number
