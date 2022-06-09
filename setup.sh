@@ -17,4 +17,12 @@ else
 	mkdir $HOME/.oh-my-zsh/plugins/zsh-autosuggestions
 	git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/plugins/zsh-autosuggestions
 fi
+
+if [ -d $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting];then
+	echo 'already have'
+else
+	mkdir $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting
+	git clone https://github.com/zsh-users/zsh-syntax-highlighting $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting
+fi
+	
 	
